@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.reverse() method reverses the order of the elements in an array.</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+<!-------------Reverse method reverse the order of the elemnts the original array-------------------->
+<!----------------splice method add and remove the array of elements in have index position and value of method-------->
+const fruit=["furits","ksdjf","kdjks","jsdkfj"]
+document.getElementById("demo").innerHTML = fruit.splice(1,1,"M.shanmugaraj")
+<!---------------------------slice method selected elements is array return as newelements in array-------------->
+const f = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = f.slice(1, 5);
+document.getElementById("demo").innerHTML = f
+<!------------------------------------concat method---------------------------------------------->
+var text="shanmugaraj"
+var text1="poornima"
+var text2="poornimashanmugaraj"
+var text3="poornima"
+document.getElementById("demo").innerHTML =text.concat(text1,text2,text3)
+<!-----------------------call back function---------------------------------------------------------------->
+<!-------call back is a function passed as an argument to call another function----------------------------->
+  <!-- function my(age,kill,l){ -->
+            <!-- s(kill,l)	 -->
+         <!-- console.log(age) 			 -->
+  <!-- } -->
+  <!-- function s(z,l){ -->
+      <!-- console.log(z) -->
+	  <!-- p(l) -->
+  <!-- } -->
+  <!-- function p(l){ -->
+      <!-- console.log(l) -->
+	  <!-- } -->
+  <!-- my(23,30,"poornima") -->
+<!--------------------------------------------callback hell----------------------------------------------->
+           <!-- function my(k){ -->
+		     
+         <!-- console.log("shanmugaraj")  -->
+          <!-- k() -->
+  <!-- } -->
+  <!-- function s(){ -->
+      <!-- console.log("poornima") -->
+	  <!-- p() -->
+	 
+  <!-- } -->
+  <!-- function p(){ -->
+      <!-- console.log("manikharnigha") -->
+	  <!-- } -->
+  <!-- my(s) -->
+<!-------------------------------------promise method is goodway to handle the asynchronus function it is used to find the it is successful completer or not--------->
+<!-------------------------------------promise chaining method in javascript------------------------>
+           <!-- function main(){ -->
+		   <!-- return new Promise(function(resolve,reject){ -->
+		     <!-- setTimeout(()=>{ -->
+			   <!-- resolve("it is shanmugaraj") -->
+			   <!-- },1000) -->
+			     <!-- }) -->
+			  <!-- } -->
+         <!-- function main1(){ -->
+            <!-- return new Promise(function(resolve,reject){ -->
+             <!-- setTimeout(()=>{ -->
+                <!-- resolve("poornima shanmugaraj lover") -->
+             <!-- },2000) -->
+               <!-- }) -->
+            <!-- } -->
+        <!-- main().then(function(res){ -->
+               <!-- console.log(res) -->
+             <!-- main1().then(function(res){ -->
+               <!-- console.log(res) -->
+        <!-- }) -->
+<!-- })		 -->
+<!-----------------------------------------------promsie chaining another method-------------------------------------->
+       <!-- function main(){ -->
+          <!-- return new Promise(function(resolve,reject){ -->
+                   <!-- setTimeout(()=>{ -->
+                      <!-- resolve("it is shanmugaraj") -->
+                     <!-- },1000) -->
+             <!-- }) -->
+       <!-- } -->
+	   <!-- function main1(q){ -->
+	          <!-- console.log(q) -->
+          <!-- return new Promise(function(resolve,reject){ -->
+                   <!-- setTimeout(()=>{ -->
+                      <!-- resolve("it is poornima") -->
+                     <!-- },1000) -->
+             <!-- }) -->
+       <!-- } -->
+	   <!-- main().then(main1).then(function(res){ -->
+	                        <!-- console.log(res) -->
+							 <!-- }).catch(function(err){ -->
+							  <!-- console.log(err) -->
+							   <!-- } -->
+							   <!-- ) -->
+<!-------------------------------Promise all method it is give parllel action moving all each forward return array of method------------------------------------------------------------>							   
+	     <!-- function main(){ -->
+          <!-- return new Promise(function(resolve,reject){ -->
+                   <!-- setTimeout(()=>{ -->
+                      <!-- resolve("it is shanmugaraj") -->
+                     <!-- },1000) -->
+             <!-- }) -->
+       <!-- } -->
+	   <!-- function main1(){ -->
+          <!-- return new Promise(function(resolve,reject){ -->
+                   <!-- setTimeout(()=>{ -->
+                      <!-- resolve("poornimashanmugaraj") -->
+                     <!-- },1000) -->
+             <!-- }) -->
+       <!-- } -->
+	   <!-- Promise.all([main(),main1()]).then(function(res){ -->
+	                 <!-- console.log(res) -->
+					  <!-- }) -->
+<!-----------------------------------async await method-------------------------------------------------->
+         <!-- function main(){ -->
+          <!-- return new Promise(function(resolve,reject){ -->
+                   <!-- setTimeout(()=>{ -->
+                      <!-- resolve("it is shanmugaraj") -->
+                     <!-- },1000) -->
+             <!-- }) -->
+       <!-- } -->
+	   <!-- function main1(){ -->
+          <!-- return new Promise(function(resolve,reject){ -->
+                   <!-- setTimeout(()=>{ -->
+                      <!-- reject("poornimashanmugaraj") -->
+                     <!-- },1000) -->
+             <!-- }) -->
+       <!-- } -->
+           <!-- async function all(){ -->
+		       <!-- try{ -->
+              <!-- let s=await main() -->
+              <!-- let d=await main1() -->
+              <!-- console.log(s,d) -->
+                     <!-- } -->
+			  <!-- catch(err){ -->
+                     <!-- console.log(err) -->
+                       <!-- } -->
+               <!-- }					    -->
+                     <!-- all()					  -->
+<!-------------------------------------------call,apply,bind---------------------------------------------------->
+<!--------------an object can use a method belonging to another object--------------------------------------->
+                 <!-- var obj={ -->
+                     <!-- fullname:function(){ -->
+                      <!-- return this.name+""+this.wifename -->
+                        <!-- } -->
+						<!-- } -->
+                  <!-- var obj1={ -->
+                       <!-- name:"shanmugaraj", -->
+					   <!-- wifename:"poornima", -->
+                       <!-- } -->
+                  <!-- var obj2={ -->
+                       <!-- name:"poornima", -->
+                       <!-- } -->
+                <!-- var s=obj.fullname.bind(obj1) -->
+               <!-- console.log(s()) -->
+<!------------------------------------------------this method is all so use only method of ------------>
+              <!-- function sha(a,b=20){ -->
+				<!-- var c=null -->
+				<!-- var c=a+b -->
+				<!-- console.log(c) -->
+				<!-- } -->
+				<!-- sha(30,10) -->
+<!-------------------------------------call apply and bind---------------------------------------->
+  <!-- var obj={ -->
+    <!-- name:"shanmugaraj" -->
+	<!-- } -->
+	<!-- var fullname={ -->
+	      <!-- normal(){ -->
+		 <!-- var call=()=>{ -->
+		   <!-- console.log(this) -->
+		    <!-- } -->
+			<!-- call() -->
+			<!-- } -->
+			<!-- } -->
+		    <!-- fullname.normal.call(obj) -->
+<!-------------------------------------spread operator rest operator------------------------------>
+                 <!-- var a={ -->
+                    <!-- name:"shanmugaraj", -->
+                    <!-- wife:"poornima", -->
+                     <!-- } -->
+                 <!-- var b={...a} -->
+                  <!-- b.name="SHANMUGARAJ" -->
+                 <!-- console.log(a,b) -->
+<!---------------------------------------------var and object method-------------------------------------------------->				 
+				 <!-- var a={name:"shanmugaraj", -->
+                        <!-- wife:"poornima"} -->
+                     <!-- var b=Object.assign({},a) -->
+                        <!-- b.name="SHANMUGARAJ" -->
+                     <!-- console.log(b)						 -->
+	
+<!----------------------------------another method-------------------------------------------------->
+              
+                 			  
+</script>
+
+</body>
+</html>
